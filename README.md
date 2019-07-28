@@ -14,7 +14,7 @@ The board has Wi-Fi, Ethernet, BLE, CAN bus connectivity and an on-board SD MMC 
 The firmware read the Modbus registers configuration that contains all the addresses and types of the Modbus registers to be readed, from a file called registers.txt that can be present inside an SD card put on the board SD MMC slot. If the firmware can't find the file or if there is no SD card on the MMC slot, it try to connect to a specific server online, using the Wi-Fi connection, to download the configuration file.
 When the configuration file has been found and correctly parsed, the firmware try to connect to an online MQTT broker and then, if succeded, it try to read all the Modbus registers specified on the config file and transmits their values to a topic on the MQTT broker.
 
-#TODO
+# TODO
   * Implementing the write functions to the Modbus library so when receiving data to a specific topic on the MQTT broker, this can be writed to the relative Modbus register.
 
   * Finish the BLE configuration part so that all the configuration data of the board (IP addresses, ports etc.) can be set via a BLE device like a smartphone.
